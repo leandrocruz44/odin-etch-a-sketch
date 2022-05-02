@@ -1,13 +1,31 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'title';
+    src: url(Coffee\ Extra.ttf);
+}
+
 *{
     margin: 5px;
 }
 
+body{
+    background-color: lightcyan;
+}
+
+h1{
+    text-align: center;
+    margin: 10px;
+    font-family: 'title', sans-serif;
+    font-size: 4vw;
+    color: magenta;
+}
+
 #container{
-    width: 500px;
-    height: 500px;
-    border: 5px solid rgb(0, 0, 0);
+    width: 450px;
+    height: 450px;
+    background-color: rgb(255, 255, 203);
+    border: 15px groove magenta;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -29,7 +47,30 @@
     justify-content: center;
 }
 
+
+#btnResize,
 #btnClear{
-    width: 90px;
+    width: 235px;
     height: 45px;
+    box-shadow: 1px 1px 5px black;
+    border-radius: 5px;
+    background-color: rgb(248, 248, 153);
+    font-family: 'title';
+    font-size: 2vw;
+    font-weight: lighter;
+    color: rgb(255, 152, 255);
+}
+
+#slider{
+    display: flex;
+    flex-flow: column;
+}
+
+#numberUpTop{
+    text-align: center;
+    margin: 0;
+}
+
+#myRange{
+    margin: 1px;
 }
