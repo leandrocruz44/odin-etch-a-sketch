@@ -48,6 +48,12 @@ function resizeSquares(color) {
                 paintSquare(ask, paint);
                 clearAll(ask);
                 break;
+            } else {
+                squareSize(initialSize);
+                createSquare(initialSize);
+                paintSquare(initialSize, color);
+                clearAll(initialSize);
+                break;
             }
         }
     })
