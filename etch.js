@@ -1,6 +1,31 @@
 const container = document.querySelector('#container');
 const initialSize = 16;
-const color = 'brown';
+const color = squareColors();
+
+function squareColors() { /* Incomplete. Returning only brown. Work in progress. */
+    const paint = {
+        color: 'brown',
+        original: function() {
+            paint.color = 'brown';
+            console.log(paint.color);
+        },
+        rainbow: function() {
+            let rgbValues = [];
+            for (let i = 0; i < 3; i++) {
+                rgbValues[i] = Math.floor(Math.random() * 255);
+            }
+            paint.color = `rgb(${rgbValues.join(', ')})`;
+            console.log(paint.color);
+        }
+    };
+    const original = document.getElementById('original');
+    original.addEventListener('click', paint.original);
+    const rainbow = document.getElementById('rainbow');
+    rainbow.addEventListener('click', paint.rainbow);
+
+    return paint.color;
+    
+}
 
 
 function squareSize(initialSize) {
@@ -48,7 +73,7 @@ function resizeSquares(color) {
                 paintSquare(ask, paint);
                 clearAll(ask);
                 break;
-            } else {
+            } else if (ask == null) {
                 squareSize(initialSize);
                 createSquare(initialSize);
                 paintSquare(initialSize, color);
