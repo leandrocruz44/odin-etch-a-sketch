@@ -1,8 +1,9 @@
 const container = document.querySelector('#container');
 const initialSize = 16;
-const color = squareColors();
+const color = 'brown';
 
-function squareColors() { /* Incomplete. Returning only brown. Work in progress. */
+//Incomplete function. Work in progress.
+/* function squareColors() { 
     const paint = {
         color: 'brown',
         original: function() {
@@ -25,7 +26,7 @@ function squareColors() { /* Incomplete. Returning only brown. Work in progress.
 
     return paint.color;
     
-}
+} */
 
 
 function squareSize(initialSize) {
